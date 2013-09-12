@@ -17,8 +17,8 @@ logging:
   # Logger-specific levels.
   loggers:
 
-    # Sets the level for 'com.example.app' to DEBUG.
-    com.github.sullis: DEBUG
+    # Sets the level for 'edu.sjsu.cmpe' to DEBUG.
+    edu.sjsu.cmpe: DEBUG
 
   # Settings for logging to stdout.
   console:
