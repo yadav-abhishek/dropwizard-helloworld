@@ -5,7 +5,6 @@ import com.yammer.dropwizard.config.Bootstrap;
 import com.yammer.dropwizard.config.Environment;
 
 import edu.sjsu.cmpe.helloworld.api.resources.HelloWorldResource;
-import edu.sjsu.cmpe.helloworld.api.resources.JSONPResource;
 import edu.sjsu.cmpe.helloworld.config.HelloWorldServiceConfiguration;
 
 public class HelloWorldService extends Service<HelloWorldServiceConfiguration> {
@@ -23,7 +22,6 @@ public class HelloWorldService extends Service<HelloWorldServiceConfiguration> {
     public void run(HelloWorldServiceConfiguration configuration,
 	    Environment environment) throws Exception {
 	environment.addResource(new HelloWorldResource());
-	environment.addResource(new JSONPResource());
     }
 
 }
