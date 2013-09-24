@@ -9,3 +9,7 @@ target
 *.jar
 *.war
 *.ear
+
+# Python compiled files #
+*.pyc
+
