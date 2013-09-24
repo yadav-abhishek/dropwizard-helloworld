@@ -1,6 +1,6 @@
 pid=`cat /tmp/app.pid`
-echo "Killing PID $pid..."
+echo "stop.sh::Killing PID $pid..."
 kill -9 $pid
-echo "Terminated PID $pid."
+echo "stop.sh::Terminated PID $pid."
 
 

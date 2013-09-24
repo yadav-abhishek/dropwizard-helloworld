@@ -1,10 +1,10 @@
-echo "Pulling lastest commits from Github..."
+echo "build.sh::Pulling the lastest commit from Github..."
 
 git pull
 
-echo "Building the app now..."
+echo "build.sh::Running Maven build now..."
 
 mvn clean package
 
-echo "Ready to deploy new jar"
+echo "build.sh::A new jar is now ready to deploy."
 
