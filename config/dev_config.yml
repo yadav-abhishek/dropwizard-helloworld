@@ -1,4 +1,3 @@
-
 # HTTP-specific options.
 http:
   # Root Path http://{host}:{port}/xxx
