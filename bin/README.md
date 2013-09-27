@@ -5,18 +5,25 @@ How the deployer works?
 2. Redeploy API - http://x.x.x.x:9000/redeploy/{api-key}
 
 
- -------------              HTTP POST                      ---------------------    git push origin master    o
-| deployer.py | <---------------------------------------- | Github.com WebHooks | <------------------------- /|\ 
- -------------                                             ---------------------                             / \
+ 
+ ------------
+| deployer.sh | 1.Run Deployer
+ ------------
+      |  
+      V
+ -------------             3.HTTP POST                   ---------------------    2.git push origin master    o
+| deployer.py | <-------------------------------------- | Github.com WebHooks | <--------------------------- /|\ 
+ -------------                                           ---------------------                               / \
       |
       |
       V
-  -------------          ---------          ----------         ----------------
- | deployer.sh |  --->  | stop.sh |  --->  | build.sh |  -->  | run-forever.sh |
-  -------------          ---------          ----------         ----------------
+  ---------          ----------         ----------------
+ | stop.sh |  --->  | build.sh |  -->  | run-forever.sh |
+  ---------          ----------         ----------------
 
                        
 stop.sh 
+--get the current running java process PID from /tmp/app.pid
 --kill -9 {PID}
 
 build.sh
@@ -24,5 +31,6 @@ build.sh
 --mvn clean package
 
 run-forever.sh
---nohup java -jar 
+--nohup java -jar xxxxxxx
+--save new PID in /tmp/app.pid
 
