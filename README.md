@@ -12,4 +12,4 @@ Endpoint: http://localhost:8080/helloworld
 
 Admin: http://localhost:8081/
 
-Mr. Abhishek Arvind Yadav
+Abhishek Arvind Yadav
